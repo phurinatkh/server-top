@@ -47,7 +47,7 @@ async def create_order(form_data: schemas.OrderPayload,
 db: Session = Depends(get_db)):
  print(f"Received data from Next.js: {form_data}")
  saved_data = crud.create_order(db=db, order=form_data)
- return {"status": "success", "message": "Appointment saved successfully",
+ return {"status": "success", "message": "Order saved successfully",
  "data": saved_data}
  
 @app.get("/OrderPayload")
